@@ -1,12 +1,10 @@
 /*jshint esversion: 6 */
 function monotonistes() {
-    try {
+  
         let str = document.getElementById("mytext4").value.trim().replace(/[ἄἅἆἇἃἂὰᾶᾷ]/g, "ά").replace(/[ἀἁᾳ]/g, "α").replace(/[ἔἕἓἒὲ]/g, "έ").replace(/[ἐἑ]/g, "ε").replace(/[ὄὅὂὃὸ]/g, "ό").replace(/[ὀὁ]/g, "ο").replace(/[ἤἥἦἧῆἢἣὴῇ]/g, "ή").replace(/[ἠἡῃ]/g, "η").replace(/[ἴἵἶἷῖἲἳὶ]/g, "ί").replace(/[ἰἱ]/g, "ι").replace(/[ὕὔὓὒῦὖὗ]/g, "ύ").replace(/[ὑὐ]/g, "υ").replace(/[ὤὥὦὧῶὢὣὼῷ]/g, "ώ").replace(/[ὠὡ]/g, "ω").replace(/[ἌἍἎἏἊἋ]/g, "Ά").replace(/[ἈἉΑ]/g, "Α").replace(/[ἜἝἚἛ]/g, "Έ").replace(/[ἘἙΕ]/g, "Ε").replace(/[ὌὍὊὋ]/g, "Ό").replace(/[ὈὉΟ]/g, "Ο").replace(/[ἬἭἮἯἪἫᾞᾟ]/g, "Ή").replace(/[ἨἩΗ]/g, "Η").replace(/[ἸἹΙ]/g, "Ι").replace(/[᾽ΥὙΥ]/g, "Υ").replace(/[ὬὭὮὯὬὫᾮᾯ]/g, "Ώ").replace(/[ὨὩΩ]/g, "Ω").replace(/Ῥ/g, "Ρ").replace(/ῥ/g, "ρ").replace("<", "&lt").replace(">", "&gt");
 
-        document.getElementById("testmono").innerHTML = monosyllabesLexeis(str); //χωρίς τις μονοσύλλαβες βάζω μόνο το str στην έξοδο
-
-
-    } catch (err) { document.getElementById("errorP").innerHTML = err.message; }
+        return monosyllabesLexeis(str); 
+        //χωρίς τις μονοσύλλαβες βάζω μόνο το str στην έξοδο
 
 }
 
@@ -23,12 +21,20 @@ function monosyllabesLexeis(str) {
         if (matches == null) { continue; }
         if (matches.length > 2) { continue; }
         if (matches.length === 2 && matches[1] === "ί") {
+<<<<<<< HEAD
             newword = words[v].replace('ί', 'ι');
 
         } else
         if (matches.length === 2 && matches[1] === "ύ") {
             newword = words[v].replace('ύ', 'υ');
 
+=======
+            newword = words[v].replace('ί', 'ι');        
+        } else
+        if (matches.length === 2 && matches[1] === "ύ") {
+            newword = words[v].replace('ύ', 'υ');
+            
+>>>>>>> 7cf122c0724ad41f641c97a4cf3fa753fe1a48c4
         } else
         if (matches.length === 1) {
             if (matches[0] === "ί") {
@@ -52,7 +58,11 @@ function monosyllabesLexeis(str) {
             if (matches[0] === "ή") {
                 newword = words[v].replace('ή', 'η');
             } else { continue; }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 7cf122c0724ad41f641c97a4cf3fa753fe1a48c4
         } else
 
         { continue; }
