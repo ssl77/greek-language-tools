@@ -24,13 +24,11 @@ function monosyllabesLexeis(str) {
         if (matches.length > 2) { continue; }
         if (matches.length === 2 && matches[1] === "ί") {
             newword = words[v].replace('ί', 'ι');
-            //   monosyllabes.push(words[v]);
-            //   neesmonosyllabes.push(newword);
+
         } else
         if (matches.length === 2 && matches[1] === "ύ") {
             newword = words[v].replace('ύ', 'υ');
-            //   monosyllabes.push(words[v]);
-            //   neesmonosyllabes.push(newword);
+
         } else
         if (matches.length === 1) {
             if (matches[0] === "ί") {
@@ -54,8 +52,7 @@ function monosyllabesLexeis(str) {
             if (matches[0] === "ή") {
                 newword = words[v].replace('ή', 'η');
             } else { continue; }
-            // monosyllabes.push(words[v]);
-            // neesmonosyllabes.push(newword);
+
         } else
 
         { continue; }
