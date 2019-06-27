@@ -243,6 +243,32 @@ function syllabismosNea(word) {
             }
         }
 
+        //συν-σύν
+    if (syllabes.length > 2 && (syllabes[1] === "συ" | syllabes[1] === "σύ") && syllabes[2].charAt(0) === "ν") {
+        syllabes[1] += "ν";
+        let syl = syllabes[2];
+        let a = syllabes[2].charAt(0);
+        syllabes[2] = syl.replace(a, "");
+    }
+    if (syllabes.length > 3 && (syllabes[2] === "συ" | syllabes[1] === "σύ") && syllabes[3].charAt(0) === "ν") {
+        syllabes[2] += "ν";
+        let syl = syllabes[3];
+        let a = syllabes[3].charAt(0);
+        syllabes[3] = syl.replace(a, "");
+    }
+    //εκ-εν-εξ
+    if (syllabes.length > 2 && (syllabes[1] === "ε" | syllabes[1] === "έ") && (syllabes[2].charAt(0) === "ν" | syllabes[2].charAt(0) === "κ" | syllabes[2].charAt(0) === "ξ")) {
+        syllabes[1] += syllabes[2].charAt(0);
+        let syl = syllabes[2];
+        let a = syllabes[2].charAt(0);
+        syllabes[2] = syl.replace(a, "");
+    }
+    if (syllabes.length > 3 && (syllabes[2] === "ε" | syllabes[2] === "έ") && (syllabes[3].charAt(0) === "ν" | syllabes[3].charAt(0) === "κ" | syllabes[3].charAt(0) === "ξ")) {
+        syllabes[2] += syllabes[3].charAt(0);
+        let syl = syllabes[3];
+        let a = syllabes[3].charAt(0);
+        syllabes[2] = syl.replace(a, "");
+    }
         return syllabes.join("-");
 
 }
