@@ -1,10 +1,10 @@
 /*jshint esversion: 6 */
-function monotonistes() {
-  
-        let str = document.getElementById("mytext4").value.trim().replace(/[ἄἅἆἇἃἂὰᾶᾷ]/g, "ά").replace(/[ἀἁᾳ]/g, "α").replace(/[ἔἕἓἒὲ]/g, "έ").replace(/[ἐἑ]/g, "ε").replace(/[ὄὅὂὃὸ]/g, "ό").replace(/[ὀὁ]/g, "ο").replace(/[ἤἥἦἧῆἢἣὴῇ]/g, "ή").replace(/[ἠἡῃ]/g, "η").replace(/[ἴἵἶἷῖἲἳὶ]/g, "ί").replace(/[ἰἱ]/g, "ι").replace(/[ὕὔὓὒῦὖὗ]/g, "ύ").replace(/[ὑὐ]/g, "υ").replace(/[ὤὥὦὧῶὢὣὼῷ]/g, "ώ").replace(/[ὠὡ]/g, "ω").replace(/[ἌἍἎἏἊἋ]/g, "Ά").replace(/[ἈἉΑ]/g, "Α").replace(/[ἜἝἚἛ]/g, "Έ").replace(/[ἘἙΕ]/g, "Ε").replace(/[ὌὍὊὋ]/g, "Ό").replace(/[ὈὉΟ]/g, "Ο").replace(/[ἬἭἮἯἪἫᾞᾟ]/g, "Ή").replace(/[ἨἩΗ]/g, "Η").replace(/[ἸἹΙ]/g, "Ι").replace(/[᾽ΥὙΥ]/g, "Υ").replace(/[ὬὭὮὯὬὫᾮᾯ]/g, "Ώ").replace(/[ὨὩΩ]/g, "Ω").replace(/Ῥ/g, "Ρ").replace(/ῥ/g, "ρ").replace("<", "&lt").replace(">", "&gt");
+function monotonistes(Str) {
 
-        return monosyllabesLexeis(str); 
-        //χωρίς τις μονοσύλλαβες βάζω μόνο το str στην έξοδο
+    let str = Str.trim().replace(/[ἄἅἆἇἃἂὰᾶᾷ]/g, "ά").replace(/[ἀἁᾳ]/g, "α").replace(/[ἔἕἓἒὲ]/g, "έ").replace(/[ἐἑ]/g, "ε").replace(/[ὄὅὂὃὸ]/g, "ό").replace(/[ὀὁ]/g, "ο").replace(/[ἤἥἦἧῆἢἣὴῇ]/g, "ή").replace(/[ἠἡῃ]/g, "η").replace(/[ἴἵἶἷῖἲἳὶ]/g, "ί").replace(/[ἰἱ]/g, "ι").replace(/[ὕὔὓὒῦὖὗ]/g, "ύ").replace(/[ὑὐ]/g, "υ").replace(/[ὤὥὦὧῶὢὣὼῷ]/g, "ώ").replace(/[ὠὡ]/g, "ω").replace(/[ἌἍἎἏἊἋ]/g, "Ά").replace(/[ἈἉΑ]/g, "Α").replace(/[ἜἝἚἛ]/g, "Έ").replace(/[ἘἙΕ]/g, "Ε").replace(/[ὌὍὊὋ]/g, "Ό").replace(/[ὈὉΟ]/g, "Ο").replace(/[ἬἭἮἯἪἫᾞᾟ]/g, "Ή").replace(/[ἨἩΗ]/g, "Η").replace(/[ἸἹΙ]/g, "Ι").replace(/[᾽ΥὙΥ]/g, "Υ").replace(/[ὬὭὮὯὬὫᾮᾯ]/g, "Ώ").replace(/[ὨὩΩ]/g, "Ω").replace(/Ῥ/g, "Ρ").replace(/ῥ/g, "ρ").replace("<", "&lt").replace(">", "&gt");
+
+    return monosyllabesLexeis(str);
+    //χωρίς τις μονοσύλλαβες βάζω μόνο το str στην έξοδο
 
 }
 
